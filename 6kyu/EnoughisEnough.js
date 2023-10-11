@@ -13,7 +13,7 @@ function deleteNth(arr,n){
                     ++count;
                 
                 if(count>n){
-                    arr.splice(j,1);
+                    arr.splice(j,1);//removing duplicate
                     break;
                 }
             }
