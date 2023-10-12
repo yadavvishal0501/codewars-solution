@@ -1,0 +1,44 @@
+// Given two strings comprised of + and -, return a new string which shows how the two strings interact in the following way:
+
+// When positives and positives interact, they remain positive.
+// When negatives and negatives interact, they remain negative.
+// But when negatives and positives interact, they become neutral, and are shown as the number 0.
+
+//solutions
+function neutralise(s1, s2) {
+    let newS ='';
+  for(let i=0;i<s1.length ; i++){
+     if(s1[i]=='+' && s2[i]=='+' ){
+         newS += '+';
+        } else if(s1[i]=='-' && s2[i]=='-' ){
+         newS +='-';
+        }else{
+            newS +='0';
+        }
+       
+      
+  }
+  return newS;
+}
+function neutralise(s1, s2) {
+    let newS ='';
+  for(let i=0;i<s1.length ; i++){
+     if(s1[i]== s2[i] ){
+         newS += s1[i];
+        } else if(s1[i]!== s2[i] ){
+         newS +='0';
+        }
+       
+      
+  }
+  return newS;
+}
+function neutralise(s1, s2) {
+ 
+    let newS ='';
+  for(let i=0;i<s1.length ; i++){
+  newS += s1[i] === s2[i] ?  s1[i]: '0'
+        }
+  return newS;
+
+}
